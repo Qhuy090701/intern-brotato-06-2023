@@ -82,8 +82,6 @@ public class UiPlayAgain : MonoBehaviour {
   }
 
   public void ViewAds() {
-    if (currenttimeViewAds > 0) {
-      ReferenceHolder.Ins.uicontroller.Uiads.SetActive(true);
-    }
+    ReferenceHolder.Ins.uiPlayAgain.Revival();
   }
 }

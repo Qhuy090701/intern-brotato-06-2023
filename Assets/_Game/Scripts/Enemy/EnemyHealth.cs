@@ -36,7 +36,7 @@ public class EnemyHealth : MonoBehaviour, IPooledObject {
     if (currentHealth <= 0) {
       if (isAdd == true) {
         ReferenceHolder.Ins.playerExp.AddExp(enemy.enemyInfo.expEnemy);
-        ObjectPool.Ins.SpawnFromPool(Constants.Tag_Coin, transform.position, Quaternion.identity);
+        SpamCoin();
         isAdd = false;
       }
 
@@ -67,5 +67,13 @@ public class EnemyHealth : MonoBehaviour, IPooledObject {
   public void OnObjectSpawn() {
     ResetHealth();
     ResetEnemyState();
+  }
+
+  public void SpamCoin() {
+    int coin = Random.Range(0, 8);
+    
+    if(coin == 0) {
+      ObjectPool.Ins.SpawnFromPool(Constants.Tag_Coin, transform.position, Quaternion.identity);
+    }
   }
 }
