@@ -24,6 +24,7 @@ public class UiPlayAgain : MonoBehaviour {
     ReferenceHolder.Ins.playerCoin.ResetData();
     ReferenceHolder.Ins.playerExp.ResetLevel();
     ReferenceHolder.Ins.playerWeapon.ResetWeapon();
+   // ReferenceHolder.Ins.playAgainButton.ResetCoinRevival();
     SceneManager.LoadScene(Constants.Scene_StartGame);
   }
 

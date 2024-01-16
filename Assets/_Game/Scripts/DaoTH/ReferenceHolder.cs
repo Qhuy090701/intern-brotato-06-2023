@@ -12,6 +12,7 @@ public class ReferenceHolder : MonoStatic<ReferenceHolder> {
   public Player player;
   public PlayerUi playerUi;
   public UiPlayAgain uiPlayAgain;
+  public PlayAgainButton playAgainButton;
   private void OnValidate() {
     // find and assign reference here
     if (playerCoin == null) { // example
@@ -53,6 +54,10 @@ public class ReferenceHolder : MonoStatic<ReferenceHolder> {
 
     if (uiPlayAgain == null) {
       uiPlayAgain = FindObjectOfType<UiPlayAgain>();
+    }
+    
+    if (playAgainButton == null) {
+      playAgainButton = FindObjectOfType<PlayAgainButton>();
     }
   }
 

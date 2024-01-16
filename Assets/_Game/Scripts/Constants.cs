@@ -31,6 +31,7 @@ public class Constants : MonoBehaviour {
   public const string PrefsKey_ShopState = "ShopState";
   public const string PrefsKey_MusicVolume = "MusicVolume";
   public const string PrefsKey_SfxVolume = "SfxVolume";
+  public const string PrefsKey_CoinBuyRevival = "CoinBuyRevival";
   //scene
   public const string Scene_StartGame = "StartGame";
   public const string Scene_Menu = "Menu";
