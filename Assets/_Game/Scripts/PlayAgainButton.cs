@@ -18,8 +18,6 @@ public class PlayAgainButton : MonoBehaviour {
     }
     
     public void CheckCoinBuyRevival() {
-        //Fix Bug - tiền
-        //FIND BUG HERRE TOMORROW.
         ReferenceHolder.Ins.player.coinAmount -= (cointToRevival + countClick);
         ReferenceHolder.Ins.playerUi.GetTextCoin();
         countClick++;
@@ -28,18 +26,16 @@ public class PlayAgainButton : MonoBehaviour {
     }
 
     public void LoadCoinRevival() {
-        if (PlayerPrefs.HasKey(Constants.PrefsKey_Coin)) {
-            countClick = PlayerPrefs.GetInt(Constants.PrefsKey_Coin);
+        if (PlayerPrefs.HasKey(Constants.PrefsKey_CoinBuyRevival)) {
+            countClick = PlayerPrefs.GetInt(Constants.PrefsKey_CoinBuyRevival);
         }
     }
     
     public void SaveCoinRevival() {
-        PlayerPrefs.SetInt(Constants.PrefsKey_Coin, countClick);
+        PlayerPrefs.SetInt(Constants.PrefsKey_CoinBuyRevival, countClick);
     }
-    
-    //if player use playagain button then reset total point = 0 . Check data in here.
-    // public void ResetCoinRevival() {
-    //     countClick = 0;
-    //     SaveCoinRevival();
-    // }
+     public void ResetCoinRevival() {
+         countClick = 0;
+         SaveCoinRevival();
+     }
 }
