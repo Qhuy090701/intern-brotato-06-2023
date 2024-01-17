@@ -1576,7 +1576,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1874358545}
         m_TargetAssemblyTypeName: GuidePlayCanvas, Assembly-CSharp
-        m_MethodName: ClickButtonNext
+        m_MethodName: ClickButtonTutorialNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2603,7 +2603,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1874358545}
         m_TargetAssemblyTypeName: GuidePlayCanvas, Assembly-CSharp
-        m_MethodName: ClickButtonPrev
+        m_MethodName: ClickButtonTutorialPrev
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2881,7 +2881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1874358542
 RectTransform:
   m_ObjectHideFlags: 0

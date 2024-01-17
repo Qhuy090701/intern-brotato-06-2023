@@ -45,4 +45,21 @@ public class GuidePlayCanvas : MonoBehaviour
 		buttonNext.SetActive(currentCanvasIndex < guidePlayCanvases.Count - 1);
 		buttonPrev.SetActive(currentCanvasIndex > 0);
 	}
+
+	public void ClickButtonTutorialPrev()
+	{
+		AudioManager.Ins.PlaySfx(SoundName.SfxMenuTutorial);
+		currentCanvasIndex--;
+		ShowCanvas(currentCanvasIndex);
+		UpdateButtonVisibility();
+	}
+	
+	
+	public void ClickButtonTutorialNext()
+	{
+		AudioManager.Ins.PlaySfx(SoundName.SfxMenuTutorial);
+		currentCanvasIndex++;
+		ShowCanvas(currentCanvasIndex);
+		UpdateButtonVisibility();
+	}
 }
