@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour {
   }
 
   private void Dead() {
-    animator.SetBool(Constants.Anim_Die, true);
+    animator.SetTrigger(Constants.Anim_Die);
   }
 
   private void OnTriggerEnter2D(Collider2D collision) {

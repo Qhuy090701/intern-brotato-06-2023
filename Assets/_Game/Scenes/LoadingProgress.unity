@@ -832,7 +832,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: e0d127f15290a0c4dbaf371fb6bb47fe, type: 3}
   sfxSounds:
   - name: 1
-    clip: {fileID: 8300000, guid: 4be312379b479704dbea3ed8c1565f17, type: 3}
+    clip: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
   - name: 2
     clip: {fileID: 8300000, guid: 3110fba12ddd2f44cbededcf1f30ade1, type: 3}
   - name: 3
