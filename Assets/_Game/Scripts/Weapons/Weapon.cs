@@ -24,8 +24,8 @@ public class Weapon : MonoBehaviour {
       FindAndFireAtTarget();
     }
     
-    currentRotation = Mathf.LerpAngle(currentRotation, targetRotation, Time.deltaTime * speedRotation);
-    transform.rotation = Quaternion.Euler(new Vector3(0, 0, currentRotation));
+    // currentRotation = Mathf.LerpAngle(currentRotation, targetRotation, Time.deltaTime * speedRotation);
+    // transform.rotation = Quaternion.Euler(new Vector3(0, 0, currentRotation));
   }
 
 

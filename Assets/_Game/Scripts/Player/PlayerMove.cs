@@ -30,10 +30,10 @@ public class PlayerMove : MonoBehaviour {
         player.animator.SetTrigger(Constants.Anim_PlayerIdle);
       }
 
-      if (player.joystick.Horizontal < 0 && player.isFacingRight) {
+      if (player.joystick.Horizontal > 0 && player.isFacingRight) {
         Flip();
       }
-      else if (player.joystick.Horizontal > 0 && !player.isFacingRight) {
+      else if (player.joystick.Horizontal < 0 && !player.isFacingRight) {
         Flip();
       }
     }
