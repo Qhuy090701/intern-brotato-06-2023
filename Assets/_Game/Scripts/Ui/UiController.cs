@@ -27,7 +27,7 @@ public class UiController : MonoBehaviour {
     UiPause.SetActive(false);
   }
   
-  public void BacktoHome() {
-    SceneManager.LoadScene("Home");
-  }
+  // public void BacktoHome() {
+  //   SceneManager.LoadScene("GamePlay");
+  // }
 }
