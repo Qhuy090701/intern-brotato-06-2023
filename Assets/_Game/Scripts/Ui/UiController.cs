@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class UiController : MonoBehaviour {
   public GameObject UiEndGame;
   public GameObject UIShop;
-  public GameObject Uiads;
   public GameObject UiPause;
 
   private void Start() {
@@ -27,7 +26,7 @@ public class UiController : MonoBehaviour {
     UiPause.SetActive(false);
   }
   
-  // public void BacktoHome() {
-  //   SceneManager.LoadScene("GamePlay");
-  // }
+  public void BacktoHome() {
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+  }
 }

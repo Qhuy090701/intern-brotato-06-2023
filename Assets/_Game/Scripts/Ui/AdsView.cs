@@ -31,7 +31,6 @@ public class AdsView : MonoBehaviour {
 
   public void ExitViewAds() {
     uiController.UiEndGame.SetActive(false);
-    uiController.Uiads.SetActive(false);
     ReferenceHolder.Ins.uiPlayAgain.Revival();
     currenttimeViewAds = timeViewAds;
   }
