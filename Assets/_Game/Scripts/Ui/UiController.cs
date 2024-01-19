@@ -7,6 +7,7 @@ public class UiController : MonoBehaviour {
   public GameObject UiEndGame;
   public GameObject UIShop;
   public GameObject Uiads;
+  public GameObject UiPause;
 
   private void Start() {
     UiEndGame.gameObject.SetActive(false);
@@ -14,5 +15,19 @@ public class UiController : MonoBehaviour {
   
   public void ShowEndGame() {
     UiEndGame.SetActive(true);
+  }
+  
+  public void PauseGame() {
+    Time.timeScale = 0;
+    UiPause.SetActive(true);
+  }
+  
+  public void ResumeGame() {
+    Time.timeScale = 1;
+    UiPause.SetActive(false);
+  }
+  
+  public void BacktoHome() {
+    SceneManager.LoadScene("Home");
   }
 }
