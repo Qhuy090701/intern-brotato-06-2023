@@ -32,7 +32,6 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 301fe569da9047c4988d46c1707ea4e5, type: 3}
     - {fileID: 2800000, guid: 6e0f7ab0ffd75354993315eb08e68f51, type: 3}
     - {fileID: 2800000, guid: 7fbd9ab32b329464a8c464e9fea41ded, type: 3}
     - {fileID: 2800000, guid: b2bedec5586ad1c458b50c919704d113, type: 3}
@@ -50,7 +49,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7fbd9ab32b329464a8c464e9fea41ded, type: 3}
   - {fileID: 21300000, guid: b2bedec5586ad1c458b50c919704d113, type: 3}
   - {fileID: 21300000, guid: aaabdf861b3cacd40a029eb50290f3f5, type: 3}
-  - {fileID: 21300000, guid: 301fe569da9047c4988d46c1707ea4e5, type: 3}
   m_PackedSpriteNamesToIndex:
   - revolver
   - 1. Button
@@ -58,7 +56,6 @@ SpriteAtlas:
   - clover
   - 2. Shadow
   - 2. Card Background
-  - Free Flat Arrow 3 N Icon
   m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0
