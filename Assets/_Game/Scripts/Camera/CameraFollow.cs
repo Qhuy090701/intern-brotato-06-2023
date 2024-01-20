@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour {
   [SerializeField] private float topLimit = 21f;
   [SerializeField] private float bottomLimit = -23f;
 
-  private void LateUpdate() {
+  private void Update() {
     if (player != null) {
       Vector3 desiredPosition =
           new Vector3(player.position.x + offset.x, player.position.y + offset.y, transform.position.z);
