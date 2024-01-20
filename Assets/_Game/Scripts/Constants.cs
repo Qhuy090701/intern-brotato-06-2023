@@ -20,6 +20,8 @@ public class Constants : MonoBehaviour {
   //Anim-Player
   public const string Anim_PlayerIdle = "PlayerIdle";
   public const string Anim_PlayerWalk = "PlayerWalk";
+  //Magic weapon
+  public const string Anim_MagicShoot = "Magic_Shoot";
   //PrefKey
   public const string PrefsKey_Coin = "PlayerCoinAmount";
   public const string PrefsKey_PlayerExp = "PlayerExp";
