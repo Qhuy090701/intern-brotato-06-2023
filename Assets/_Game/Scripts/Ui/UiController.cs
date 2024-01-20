@@ -28,5 +28,6 @@ public class UiController : MonoBehaviour {
   
   public void BacktoHome() {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    Time.timeScale = 1;
   }
 }
