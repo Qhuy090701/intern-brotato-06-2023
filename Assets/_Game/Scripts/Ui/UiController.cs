@@ -9,6 +9,7 @@ public class UiController : MonoBehaviour {
   public GameObject UiPause;
 
   private void Start() {
+    UiPause.SetActive(false);
     UiEndGame.gameObject.SetActive(false);
   }
   
