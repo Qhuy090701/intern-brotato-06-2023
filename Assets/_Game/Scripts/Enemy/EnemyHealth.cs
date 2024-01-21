@@ -41,6 +41,7 @@ public class EnemyHealth : MonoBehaviour, IPooledObject {
       }
 
       enemy.currentState = Enemy.EnemyState.Dead;
+      AudioManager.Ins.PlaySfx(SoundName.SfxShoot);
       Invoke("MakeDead", 0.5f);
     }
   }
