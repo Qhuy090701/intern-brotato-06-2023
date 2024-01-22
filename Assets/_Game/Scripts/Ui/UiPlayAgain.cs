@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -7,9 +8,16 @@ public class UiPlayAgain : MonoBehaviour {
   [SerializeField] private TMP_Text textViewAds;
   [SerializeField] private GameObject btnViewAds;
   [SerializeField] private GameObject UiCountDown;
+  private PlayAgainButton playAgainButton;
   public float currenttimeViewAds;
 
   public float delaytime = 5f;
+
+  private void OnValidate() {
+    if (playAgainButton == null) {
+      playAgainButton = FindObjectOfType<PlayAgainButton>();
+    }
+  }
 
   private void Awake() {
     currenttimeViewAds = delaytime;
@@ -34,11 +42,11 @@ public class UiPlayAgain : MonoBehaviour {
       currenttimeViewAds--;
       textViewAds.text = Mathf.RoundToInt(currenttimeViewAds).ToString();
     }
-    
+
     UiCountDown.SetActive(false);
     btnViewAds.SetActive(false);
   }
-  
+
 
   public void Revival() {
     ReferenceHolder.Ins.player.die = false;
@@ -51,7 +59,7 @@ public class UiPlayAgain : MonoBehaviour {
 
     //time
     ReferenceHolder.Ins.timeManager.SavePlayerPrefsData(ReferenceHolder.Ins.timeManager.currentWave);
-    
+
     //coin
     ReferenceHolder.Ins.playerCoin.SaveCoinAmount(ReferenceHolder.Ins.player.lastCoin);
     ReferenceHolder.Ins.player.nextAvailableWeaponIndex = ReferenceHolder.Ins.player.lastnextAvailableWeaponIndex;
@@ -63,7 +71,8 @@ public class UiPlayAgain : MonoBehaviour {
 
     for (int i = 0; i < ReferenceHolder.Ins.player.lastWeapon.Count; i++) {
       if (i < ReferenceHolder.Ins.player.weaponPositions.Count && ReferenceHolder.Ins.player.weaponPositions[i] != null) {
-        Transform weaponObject = Instantiate(ReferenceHolder.Ins.player.weaponPrefab, ReferenceHolder.Ins.player.weaponPositions[i].position, ReferenceHolder.Ins.player.weaponPositions[i].rotation).transform;
+        Transform weaponObject = Instantiate(ReferenceHolder.Ins.player.weaponPrefab, ReferenceHolder.Ins.player.weaponPositions[i].position,
+          ReferenceHolder.Ins.player.weaponPositions[i].rotation).transform;
         weaponObject.SetParent(ReferenceHolder.Ins.player.weaponParent);
         Weapon weaponComponent = weaponObject.GetComponent<Weapon>();
         weaponComponent.currentWeaponId = ReferenceHolder.Ins.player.lastWeapon[i].weaponID;

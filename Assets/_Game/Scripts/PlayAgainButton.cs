@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayAgainButton : MonoBehaviour {
   [SerializeField] private TMP_Text textViewAds;
   [SerializeField] private int cointToRevival = 10;
-
   public int countClick = 2;
 
   private void Start() {
@@ -25,6 +24,7 @@ public class PlayAgainButton : MonoBehaviour {
       GetTextBuyRevival();
       ReferenceHolder.Ins.playerCoin.DeductCoins(totalCoinRiveval);
       SaveCoinRevival();
+      ReferenceHolder.Ins.uiPlayAgain.Revival();
     } else {
       textViewAds.text = "Don't have enough money";
     }
