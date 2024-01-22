@@ -63,9 +63,9 @@ public class PlayerCoin : MonoBehaviour {
       player.coinAmount = PlayerPrefs.GetInt(Constants.PrefsKey_Coin);
     }
   }
-
+  
   public void ResetData() {
-    player.coinAmount = 500;
+    player.coinAmount = 0;
     player.lastCoin = player.coinAmount;
     SaveCoinAmount(player.coinAmount);
   }
