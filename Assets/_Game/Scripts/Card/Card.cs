@@ -38,11 +38,12 @@ public class Card : MonoBehaviour {
         cardUi.ButtonAddWeapon.text = "Can't Merge";
       }
     } else {
-      cardUi.ButtonAddWeapon.text = "Don't have enough money";
+      cardUi.ButtonAddWeapon.text = "Buy more";
     }
   }
 
   public void AddLevel() {
+    Debug.Log("AddLevel");
     AudioManager.Ins.PlaySfx(SoundName.SfxClickButton);
     if (ReferenceHolder.Ins.player.characterLevel == ReferenceHolder.Ins.player.maxLevel) {
       cardUi.ButtonUplevel.text = "Max";
@@ -53,8 +54,11 @@ public class Card : MonoBehaviour {
       uplevel++;
       ReferenceHolder.Ins.playerExp.LevelUp();
       ReferenceHolder.Ins.playerCoin.DeductCoins(cost);
+      cardUi.ButtonUplevel.text = (uplevel * 10).ToString();
+    } else {
+      cardUi.ButtonUplevel.text = "Buy more";
+      Debug.Log("Buy more");
     }
-    cardUi.ButtonUplevel.text = (uplevel * 10).ToString();
   }
 
   public void NextWave() {
@@ -64,8 +68,10 @@ public class Card : MonoBehaviour {
       nextWave++;
       ReferenceHolder.Ins.timeManager.UpWave();
       ReferenceHolder.Ins.playerCoin.DeductCoins(cost);
+      cardUi.ButtonNextWave.text = (nextWave * 10).ToString();
+    } else {
+      cardUi.ButtonNextWave.text = "Buy more";
     }
-    cardUi.ButtonNextWave.text = (nextWave * 10).ToString();
   }
 
   public void DoubleMoney() {
