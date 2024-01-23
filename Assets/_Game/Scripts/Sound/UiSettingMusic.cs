@@ -6,17 +6,29 @@ using UnityEngine.UI;
 public class UiSettingMusic : MonoBehaviour {
   public Slider musicSlider;
   public Slider sfxSlider;
+  [SerializeField] private GameObject muteMusic;
+  [SerializeField] private GameObject muteSfx;
 
   private void Start() {
     LoadVolumeSettings();
   }
 
   public void MusicVolume() {
+    if (musicSlider.value == 0) {
+      muteMusic.SetActive(true);
+    } else {
+      muteMusic.SetActive(false);
+    }
     AudioManager.Ins.MusicVolume(musicSlider.value);
     SaveVolumeSettings(Constants.PrefsKey_MusicVolume, musicSlider.value);
   }
 
   public void SFXVolume() {
+    if(sfxSlider.value == 0) {
+      muteSfx.SetActive(true);
+    } else {
+      muteSfx.SetActive(false);
+    }
     AudioManager.Ins.SfxVolume(sfxSlider.value);
     SaveVolumeSettings(Constants.PrefsKey_SfxVolume, sfxSlider.value);
   }
